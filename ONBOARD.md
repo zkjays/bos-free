@@ -21,29 +21,33 @@ Confirm once. If they confirm, set `onboarded: false` and run the first-time flo
 
 ## First-time flow
 
-1. Explain in 6 lines, their language if already known, otherwise English then switch:
-   - this is a BOS, not a skills pack
-   - it will remember them across chats
-   - it will not publish without them
-   - tonight: answers, then `/save`, then a new chat that still knows them
+1. Ask: name or handle, what they do in one line, which language to use from now on.
+   Write those three into `CLAUDE.md` and `memory.md`. Switch to that language now.
 
-2. Ask: name or handle, what they do in one line, which language to use from now on.
-   Write those three into `CLAUDE.md` and `memory.md`.
+2. In their language, explain in a few plain lines:
+   - this remembers you across chats, so you don't re-explain yourself
+   - it never publishes or sends anything without you
+   - tonight: a quick walkthrough, then closing the session, then opening a new one to prove it remembers
 
-3. Ask: every project or business they are actually running, including the one they keep postponing.
-   Write short lines under Active work in `memory.md`. No project files.
+3. Walk through the pieces one at a time, plain language, no jargon, no command names in the explanation itself.
 
-4. Ask: every relationship they need to track (clients, leads, collaborators).
-   If they name people, create `network/<slug>.md` from `network/_template.md` for each, and list the names in memory.
-   If they name no one, leave `network/` empty.
+   - Memory: "I keep track of what you're working on, automatically, every time we close a session."
+     No question needed here — nothing to fill in now.
 
-5. Ask: every decision they keep re-explaining or re-arguing with themselves.
-   For each one they consider already decided, append to `decisions/log.md` as `active`.
-   For each one still open, leave it under Decisions I keep re-explaining in memory.
+   - People: "Want to keep track of anyone you deal with regularly, like clients or collaborators?
+     I'll keep a note per person so you never have to re-explain who they are."
+     If yes, take down a note for each name they give.
 
-6. Explain the four folders in four lines. Explain `/save`. Explain the second-chat test: close this tab, open a new one, ask "where were we?".
+   - Decisions: "When you make a real decision on something, I'll log it so you never
+     have to re-argue it with yourself later." No question needed — nothing to do now.
 
-7. Set `onboarded: true` in `CLAUDE.md`.
+   - Inbox: "Any notes you want to remember and use later, want to add one now?"
+     If yes, take it down. If no, move on.
+
+4. Explain closing a session (`/save`): it writes down what happened and remembers it for next time.
+   Explain the test: close this tab, open a new one, ask "where were we?".
+
+5. Set `onboarded: true` in `CLAUDE.md`.
    Write `system/current-state.md` as: onboard just finished, next action is `/save` then a new chat.
 
-8. Stop. Do not add skills, departments, or extra folders.
+6. Stop. Do not add skills, departments, or extra folders.
