@@ -1,7 +1,6 @@
 # BOS — operator
 
 onboarded: false
-language: ask on first /onboard
 
 ## Who this is
 
