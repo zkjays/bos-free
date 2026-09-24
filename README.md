@@ -10,11 +10,11 @@ You still need an AI subscription (Claude in the browser, or Codex). That is the
 
 ## Tonight
 
-1. Create a **private** GitHub repo. This public repo is the template. Your vault must be private.
-2. Copy these files into your private repo (download ZIP, or fork then make the fork private).
+1. On this page, click **Use this template** → **Create a new repository**. This public repo is only the template.
+2. Name it, set it to **Private**, then click **Create repository**. Your vault must be private.
 3. Open [claude.ai/code](https://claude.ai/code), connect that private repo.
 4. Type `/onboard`. Answer the questions. Do not design folders.
-5. Type `/save`.
+5. Type `/save`. When it asks if you want to save for good, say yes.
 6. Open a **new** chat on the same repo and ask: `where were we?`
 
 If it answers without a brief, it works. If it asks who you are, run `/save` again.
@@ -44,7 +44,7 @@ Projects you name during onboard become short lines in `memory.md`, not a projec
 ## Commands
 
 - `/onboard` — first run writes memory. Later runs are read-only unless you say `reset onboard`.
-- `/save` — update memory if something new is true, overwrite state, log the session, route stale decisions, push to GitHub. After 5 session logs, it *asks* to compact. It does not compact alone the first week.
+- `/save` — update memory if something new is true, overwrite state, log the session, route stale decisions, then ask before saving to GitHub for good. After 5 session logs, it *asks* to compact. It does not compact alone the first week.
 
 ## What this is not
 

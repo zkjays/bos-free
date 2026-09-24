@@ -15,8 +15,13 @@ Close this session. Persist. Push if git is available.
    Do not invent staleness dates. Ask when unsure.
 6. Inbox: if they dropped notes in `inbox/` that now belong in memory, decisions, or network, file them and delete or empty the inbox file.
 7. Count files in `system/sessions/` that are not under `archives/`. If the count is 5 or more, tell them it is time to compact, and wait. Do not compact unless they say yes.
-8. If git works here: stage the files you changed, commit with a one-line message, push to the connected remote. If git is missing, say so and still write the files.
-9. Reply with four lines: what changed, where the session log lives, whether you pushed, whether compact is due.
+8. If git works here: stage the files you changed, commit with a one-line message, push the current branch. If git is missing, say so and still write the files.
+9. Ask one validation question, in the user's language. Example: "Happy with today's work? Want me to save it into your BOS for good?"
+   - yes: if you are on a session branch (not `main`), merge it into `main`, then push `main`. If you are already on `main`, the push in step 8 is enough.
+   - no: stop there. The work stays on the session branch. Nothing is lost.
+   - if the merge or push fails or is blocked: do not force it and do not work around it. Tell them in one plain sentence that today's work is kept safe and will be saved next time.
+   Never use the words branch, merge, or commit in this question.
+10. Reply with four short lines: what changed, where the session log lives, `saved` (or `kept for later, nothing lost`), whether compact is due. Do not mention branches or merges.
 
 ## Do not
 
